@@ -7,4 +7,4 @@
   (is (= 2 2))
   (is (= 3 3))
   (is (= test_record.core.MyRecord (type (map->MyRecord {:id 1}))))
-  (is (string? "Comment this assertion to have previous assertion pass.")))
+  (is (string? "Comment/Uncomment this assertion to have previous assertion pass/fail.")))

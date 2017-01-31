@@ -7,15 +7,18 @@ if it is the last assertion.
 
 ## Usage
 
-1. `cider-jack-in`
-2. `, e b` in core_test.clj
-3. `, t t` -> PASS
-4. `, e b` in core.clj
-5. `, t t` -> FAIL
-6. Comment third assertion
-7. `, t t` -> PASS
-8. Uncomment third assertion
-9. `, t t` -> FAIL
+1. `M-x cider-jack-in`
+2. `M-x cider-eval-buffer` in core_test.clj
+3. `M-x cider-test-run-test` -> PASS
+4. `M-x cider-eval-buffer` in core.clj
+5. `M-x cider-test-run-test` -> FAIL
+6. Comment last assertion
+7. `M-x cider-eval-buffer` in core_test.clj
+8. `M-x cider-test-run-test` -> PASS
+9. Uncomment last assertion
+10. `M-x cider-eval-buffer` in core_test.clj
+11. `M-x cider-test-run-test` -> FAIL
+12. Goto 6.
 
 ## License
 
