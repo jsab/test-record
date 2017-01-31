@@ -5,6 +5,12 @@
 (deftest a-test
   (is (= 1 1))
   (is (= 2 2))
-  (is (= 3 3))
-  (is (= test_record.core.MyRecord (type (map->MyRecord {:id 1}))))
+  (is (string? "Here the assertion is not the last and it fails."))
+  (is (= test_record.core.MyRecord (type (map->MyRecord {}))))
   (is (string? "Comment/Uncomment this assertion to have previous assertion pass/fail.")))
+
+(deftest b-test
+  (is (= 1 1))
+  (is (= 2 2))
+  (is (string? "Here the assertion is the last and it passes."))
+  (is (= test_record.core.MyRecord (type (map->MyRecord {})))))

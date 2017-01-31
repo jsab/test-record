@@ -9,16 +9,18 @@ if it is the last assertion.
 
 1. `M-x cider-jack-in`
 2. `M-x cider-eval-buffer` in core_test.clj
-3. `M-x cider-test-run-test` -> PASS
+3. `M-x cider-test-run-ns-tests` -> PASS
 4. `M-x cider-eval-buffer` in core.clj
-5. `M-x cider-test-run-test` -> FAIL
-6. Comment last assertion
+5. `M-x cider-test-run-ns-tests` -> FAIL
+6. Comment the last assertion of the first test.
 7. `M-x cider-eval-buffer` in core_test.clj
-8. `M-x cider-test-run-test` -> PASS
-9. Uncomment last assertion
+8. `M-x cider-test-run-ns-tests` -> PASS
+9. Uncomment the last assertion of the first test.
 10. `M-x cider-eval-buffer` in core_test.clj
-11. `M-x cider-test-run-test` -> FAIL
+11. `M-x cider-test-run-ns-tests` -> FAIL
 12. Goto 6.
+
+Using `cider-load-buffer` instead of `cider-eval-buffer` yields the same results.
 
 ## License
 
